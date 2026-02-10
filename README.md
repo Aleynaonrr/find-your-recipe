@@ -6,7 +6,7 @@ This program will suggest you the recipe that you have the ingredients for.
 <br>You can give up to 5 ingredients to the program, and it'll deliver the recipies for you
 ## 🔧 My Contribution
 
-**⚠️ IMPORTANT:** I (Aleynaonrr) and my teammate (enessaduman) developed the **Web Scrapping** for this project.
+**⚠️ IMPORTANT:** I (Aleynaonrr) and my teammate (@enessaduman) developed the **Web Scrapping** for this project.
 
 **Other project components were developed by my team members.**
 
@@ -14,10 +14,10 @@ This program will suggest you the recipe that you have the ingredients for.
 
 This is a **collaborative project** developed by:
 - **Aleynaonrr** -  Project Contributor
-- **zeyneptuana22** - Project Contributor
-- **zehraa2005** - Project Contributor
-- **enessaduman** - Project Contributor
-- **busracode** - Project Contributor
+- **zeyneptuana22** - Project Contributor @zeyneptuana22
+- **zehraa2005** - Project Contributor @zehraa2005
+- **enessaduman** - Project Contributor @enessaduman
+- **busracode** - Project Contributor @busracode
 
 ---
 
