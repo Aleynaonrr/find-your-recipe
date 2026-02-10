@@ -1,0 +1,71 @@
+WEB SCRAPING
+    Libs:
+        -Scrapy
+        -Playwright
+    HTML (Info):
+        Main Url:
+        <div class "center"
+        <a href"/meal/"
+            <div class "center"
+            <h1 MEAL NAME ---> Yemek Adı
+            !!! Check for the meal tags !!!
+            <table<tbody<td (?)
+            <a href"/ingredient/" ----> 2 seçenek: 1)Daha çok parslayıp tarif düzeyinde isim / 2)Malzeme sitesine atlayıp başlık çekmek (daha doğru)
+            !!! Burda malzemeler yemek listesinde çekilip .join - tarif // Malzeme sitesinden başlık ----> Edge for Database !!!
+        <h2 Instruction ----> yapılış normal bir string halinde ama 1*
+        def parse
+
+        def parse_recipe
+        def parse_ing
+DATABASE
+    Libs:
+        -FalkorDB (20) (Docker)
+        -MongoDB
+        -Neo4J
+        -Redis
+    PROCEDURE:
+        QUERY FOR:
+
+            ...
+USER EXP
+    Libs:
+        -argparse
+        -abstractClasseargparse
+        -abstractClasses
+
+INSTALLATION:
+pip install nltk
+pip install docker
+pip install falkordb
+pip install scrappy
+REQUIRE: Docker Engine!
+
+
+
+# $parameter prevents the not SQL (since Falkor noSQL) but the Cypher injection attacks
+# Query 1: Creating Recipe Nodes
+CREATE_RECIPE_NODE = """
+    UNWIND $RECIPE_DATA AS r
+    MERGE (recipe:Recipe {name: r['Food Name'], instructions: r.Instructions})
+    UNWIND r['Ingredients Used'] AS ingPortionSTR
+    MERGE (i:IngredientP {ingPortion: ingPortionSTR})
+    MERGE (recipe)-[:MADE_WITH]->(i)
+"""
+# Query 2: Linking Raw Ingredients
+CREATE_RAW_INGREDIENT_NODE = """
+    UNWIND $dict AS d
+    MATCH (r:Recipe {name: d['Food Name']})
+    UNWIND d['Raw Ingredients'] AS I
+    MERGE (i:Ingredient {name: I})
+    MERGE (r)-[:HAS_THE_ITEM]->(i)
+"""
+# Running the queries safely
+for recipe in recipes:
+    try:
+        graph.query(CREATE_RECIPE_NODE, {'RECIPE_DATA': recipe})
+        graph.query(CREATE_RAW_INGREDIENT_NODE, {'dict': recipe_raw_ing_lst})
+        print("Database update successful.")
+    except ResponseError as e:
+        print(f"Cypher Query Execution Error: {e}")
+    except RedisConnectionError as e:
+        print(f"Database Connection error while executing query: {e}")
