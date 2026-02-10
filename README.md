@@ -109,9 +109,9 @@ Other than that it basically list the recipies and ask for you to choose one.
 ├── Saved_Recipes.txt      # 📄 OUTPUT TEXT FILE
 ````
 ### Thank you for using our servise, HAPPY COOKING 🧑‍🍳
-# Recipe Data
+# Find Your Recipe
 
-Welcome to the Recipe Data repository! This project aims to provide a comprehensive and accessible collection of recipes that encourages users to explore diverse culinary traditions.
+Welcome to the Find Your Recipe repository! This project aims to provide a comprehensive and accessible collection of recipes that encourages users to explore diverse culinary traditions.
 
 ## Features
 - A wide variety of recipes from different cuisines.
@@ -121,15 +121,14 @@ Welcome to the Recipe Data repository! This project aims to provide a comprehens
 ## Installation
 To get started with this project, clone the repository and install the required dependencies:
 ```bash
-git clone https://github.com/Aleynaonrr/Recipe-Data.git
+git clone https://github.com/Aleynaonrr/find-your-recipe.git
 cd Recipe-Data
 # Install dependencies
 ```
 
 ## Usage
 Simply navigate through the recipes and find your favorites! You can submit your recipes through our submission form.
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 ## Acknowledgments
 Special thanks to everyone who contributed to this project and made it a success! 
